@@ -1,0 +1,66 @@
+============================================================
+GS2026.2 — CITIZENTECH: ASSISTENTE DE MOBILIDADE URBANA
+============================================================
+
+EQUIPE:
+- Eric dos Santos Mendes da Silva | RM: 569528
+- Rafael Côrtes Lins | RM: 570588
+- Tom Stringasci Albuquerque Coelho Morais | RM: 568844
+
+TURMA: 1CCPG
+TEMA: Mobilidade
+DATA: 19/11/2026
+
+============================================================
+TELA FINAL DO SISTEMA
+============================================================
+
+[Cópia da tela final do Gradio aqui]
+
+Exemplo de interação:
+
+Usuário: O ponto da Rua das Flores está funcionando?
+
+Assistente: Não. Segundo a Portaria nº 047/2025 (publicada em 
+22/01/2025), o ponto da Rua das Flores, 320 encontra-se 
+INTERDITADO desde 01/02/2025 devido às obras de revitalização 
+da Praça das Flores. 
+
+Fonte: portaria_atualizacao_2025.txt (doc_id: doc2_chunk1)
+
+O ponto alternativo está localizado na Avenida Principal, 1520 
+(esquina com a Rua das Flores).
+
+Fonte: portaria_atualizacao_2025.txt (doc_id: doc2_chunk2)
+
+============================================================
+LINKS
+============================================================
+
+Repositório de código:
+[INSERIR LINK DO GITHUB]
+
+Vídeo de demonstração (YouTube não listado):
+[INSERIR LINK DO YOUTUBE]
+
+Notebook no Google Colab:
+[INSERIR LINK DO COLAB]
+
+============================================================
+DECLARAÇÃO
+============================================================
+
+Declaramos que este trabalho é de nossa autoria, desenvolvido
+para a disciplina Prompt and Artificial Intelligence (FIAP),
+Global Solution 2026.2.
+
+São Paulo, 19 de novembro de 2026.
+
+_________________________________
+Eric dos Santos Mendes da Silva
+
+_________________________________
+Rafael Côrtes Lins
+
+_________________________________
+Tom Stringasci Albuquerque Coelho Morais

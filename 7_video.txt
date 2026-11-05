@@ -1,0 +1,37 @@
+================================================================
+ 7_VIDEO.TXT - DEMONSTRACAO DO PROJETO
+================================================================
+Projeto : Assistente de Mobilidade - Linha 714 (Vai-e-Vem)
+Tema    : Mobilidade
+Turma   : 1CCPI
+Grupo   : Grupo X
+
+Titulo sugerido:
+  GS 2026.2 - Assistente de Mobilidade da Linha 714 (Grupo X)
+
+Link do video (YouTube NAO LISTADO):
+  https://youtu.be/SEU_LINK_AQUI
+
+Duracao sugerida: 5 a 8 minutos.
+
+Roteiro sugerido:
+  1. Apresentacao do grupo e do tema (30s)
+  2. Base documental e o conflito 2024 x 2025 (1 min)
+  3. Chunking e indexacao no ChromaDB (1 min)
+  4. Demonstracao da interface Gradio:
+     - pergunta simples (horario de sabado)
+     - pergunta-armadilha (ponto interditado)
+     - pergunta de gratuidade (idoso no domingo)
+     - painel de fontes e confianca
+     - modo agente (tools)
+  5. Guardrails em acao:
+     - prompt injection bloqueado
+     - horario inexistente recusado
+  6. Avaliacao RAGAS e leitura das metricas (1 min)
+  7. Conclusao e melhorias futuras (30s)
+
+Observacoes:
+  - O video deve permanecer como "Nao listado" no YouTube.
+  - Substituir o link acima pelo endereco real antes da submissao.
+  - Conferir se o audio e a tela do notebook/Gradio estao legiveis.
+================================================================

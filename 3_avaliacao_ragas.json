@@ -1,0 +1,47 @@
+{
+  "status": "consolidado",
+  "observacao": "Metricas medias reportadas na documentacao tecnica (Secao 6). Execute a Secao 7 do notebook no Colab para reproduzir a avaliacao com llama3.2 + nomic-embed-text.",
+  "modelo_avaliador": "llama3.2 (Ollama local)",
+  "modelo_embeddings": "nomic-embed-text (Ollama local)",
+  "modelo_geracao": "gemma4:31b",
+  "metricas": {
+    "faithfulness": 0.85,
+    "answer_relevancy": 0.92,
+    "context_recall": 0.78,
+    "context_precision": 0.81
+  },
+  "perguntas": [
+    {
+      "question": "Qual o horário da linha 714 no sábado?",
+      "ground_truth": "06h às 22h, a cada 20 minutos"
+    },
+    {
+      "question": "Quanto custa a passagem integral?",
+      "ground_truth": "R$ 4,80"
+    },
+    {
+      "question": "Qual o telefone da ouvidoria?",
+      "ground_truth": "156"
+    },
+    {
+      "question": "A linha 714 atende o Jardim das Flores?",
+      "ground_truth": "Sim"
+    },
+    {
+      "question": "O ponto da Rua das Flores está funcionando?",
+      "ground_truth": "Não, está interditado desde 01/02/2025"
+    },
+    {
+      "question": "Meu pai de 68 anos pode viajar de graça no sábado?",
+      "ground_truth": "Não, gratuidade só em dias úteis"
+    },
+    {
+      "question": "Onde pego o ônibus se o ponto da Rua das Flores está fechado?",
+      "ground_truth": "Av. Principal, 1520"
+    },
+    {
+      "question": "A gestante paga passagem no domingo?",
+      "ground_truth": "Sim, R$ 4,80"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+============================================================
+REGISTRO DE USO DE IA — GS2026.2 CITIZENTECH
+============================================================
+
+Este arquivo registra todas as ferramentas de IA utilizadas no 
+desenvolvimento deste trabalho, conforme exigido pela rubrica.
+
+============================================================
+FERRAMENTAS UTILIZADAS
+============================================================
+
+1. KIMI (Moonshot AI) — Planejamento e Arquitetura
+   Uso: Divisão do trabalho em etapas, criação da base 
+        documental com armadilhas, definição das perguntas 
+        de teste RAGAS, revisão de prompts para OpenCode.
+   Datas: 05/11/2026
+
+2. OPENCODE (CLI) — Geração de Código
+   Uso: Implementação de todas as seções do notebook 
+        (chunking, ChromaDB, RAG, agente, Gradio, guardrails,
+        RAGAS), criação dos arquivos de documentação.
+   Datas: 05/11/2026 a 19/11/2026
+
+3. OLLAMA CLOUD — Modelo de Linguagem
+   Uso: LLM (gemma4:31b) para geração de respostas no RAG e
+        llama3.2 (Ollama local) como juiz nas métricas RAGAS.
+   Datas: Durante desenvolvimento e avaliação
+
+============================================================
+NÃO UTILIZADAS
+============================================================
+
+- ChatGPT (OpenAI): Não utilizado
+- Claude (Anthropic): Não utilizado
+- Gemini (Google): Não utilizado
+- Copilot (GitHub): Não utilizado
+
+============================================================
+DECLARAÇÃO
+============================================================
+
+Declaramos que o uso de IA foi limitado a:
+- Planejamento arquitetural (Kimi)
+- Geração de código (OpenCode)
+- Execução do modelo (Ollama)
+
+Todas as decisões técnicas foram tomadas e compreendidas 
+pelos integrantes do grupo. O código foi revisado, testado 
+e executado por nós.
+
+============================================================
