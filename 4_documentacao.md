@@ -127,7 +127,7 @@ Sistema RAG (Retrieval-Augmented Generation) que consulta base documental munici
 
 ## 8. Repositório
 
-[Link do GitHub/GitLab do grupo]
+[[Link do GitHub/GitLab do grupo](https://github.com/rafaelclins/gs-2026.2)]
 
 ---
 

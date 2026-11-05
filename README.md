@@ -3,7 +3,7 @@
 Projeto de **Generative Systems (GS 2026.2)** que implementa um pipeline **RAG** sobre a base documental da Linha 714 de transporte público, com interface de chat em Gradio, agente com ferramentas, guardrails de segurança e avaliação com RAGAS.
 
 **Tema:** Mobilidade  
-**Turma/Sala:** 1CCPG  
+**Turma/Sala:** 1CCPI  
 **Grupo:** Grupo X
 
 ## Integrantes

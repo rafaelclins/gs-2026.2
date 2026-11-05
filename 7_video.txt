@@ -12,26 +12,54 @@ Titulo sugerido:
 Link do video (YouTube NAO LISTADO):
   https://youtu.be/SEU_LINK_AQUI
 
-Duracao sugerida: 5 a 8 minutos.
+# Apresentação do projeto Vai-e-Vem
 
-Roteiro sugerido:
-  1. Apresentacao do grupo e do tema (30s)
-  2. Base documental e o conflito 2024 x 2025 (1 min)
-  3. Chunking e indexacao no ChromaDB (1 min)
-  4. Demonstracao da interface Gradio:
-     - pergunta simples (horario de sabado)
-     - pergunta-armadilha (ponto interditado)
-     - pergunta de gratuidade (idoso no domingo)
-     - painel de fontes e confianca
-     - modo agente (tools)
-  5. Guardrails em acao:
-     - prompt injection bloqueado
-     - horario inexistente recusado
-  6. Avaliacao RAGAS e leitura das metricas (1 min)
-  7. Conclusao e melhorias futuras (30s)
+## 1. Introdução (0:00–0:25)
 
-Observacoes:
-  - O video deve permanecer como "Nao listado" no YouTube.
-  - Substituir o link acima pelo endereco real antes da submissao.
-  - Conferir se o audio e a tela do notebook/Gradio estao legiveis.
-================================================================
+"Olá! Meu nome é Rafael Côrtes Lins e, junto com Eric dos Santos Mendes da Silva e Tom Stringasci Albuquerque Coelho Morais, desenvolvi o projeto Vai-e-Vem para a Global Solution de Generative Systems.
+
+Nosso projeto é um assistente de mobilidade urbana voltado à Linha 714, criado para facilitar o acesso a informações atualizadas sobre horários, tarifas e pontos de ônibus."
+
+## 2. Problema e solução (0:25–0:55)
+
+"O problema que buscamos resolver é a dificuldade de encontrar informações confiáveis sobre o transporte público. Um ponto pode ser interditado ou uma regra de gratuidade pode mudar, mas documentos antigos continuam circulando.
+
+Para isso, desenvolvemos um assistente que utiliza RAG, uma técnica que permite ao modelo consultar documentos específicos antes de gerar uma resposta, apresentando também as fontes utilizadas."
+
+## 3. Funcionamento da arquitetura (0:55–1:25)
+
+"Nosso sistema carrega documentos, divide o conteúdo em partes menores, gera embeddings com o Nomic e armazena esses vetores no ChromaDB.
+
+Quando o usuário faz uma pergunta, o sistema recupera os trechos mais relevantes e os envia ao modelo de linguagem, que constrói uma resposta baseada nessas informações.
+
+Também implementamos ferramentas para consultar o status de pontos e calcular horários."
+
+## 4. Demonstração (1:25–2:15)
+
+**[Mostrar a interface Gradio]**
+
+"Agora, vamos ver o sistema funcionando.
+
+Primeiro, vou consultar uma informação sobre os horários da linha."
+
+**[Fazer uma pergunta sobre horários]**
+
+"Também podemos testar uma situação em que os documentos apresentam informações diferentes."
+
+**[Perguntar sobre o ponto da Rua das Flores]**
+
+"Enquanto um documento de 2024 informa que o ponto está ativo, uma portaria de 2025 determina sua interdição. O sistema deve considerar a atualização mais recente e apresentar a fonte correspondente."
+
+**[Mostrar resposta e fontes]**
+
+## 5. Segurança e avaliação (2:15–2:40)
+
+"Além disso, implementamos três mecanismos de proteção: validação das regras de gratuidade, prevenção contra horários inventados e sanitização contra tentativas de prompt injection.
+
+Também utilizamos o RAGAS para avaliar aspectos como fidelidade ao contexto, relevância das respostas e qualidade da recuperação."
+
+## 6. Encerramento (2:40–2:55)
+
+"Com o Vai-e-Vem, demonstramos como RAG e agentes de inteligência artificial podem ser aplicados a um problema real, oferecendo informações mais contextualizadas e rastreáveis sobre o transporte público.
+
+Obrigado pela atenção!"
