@@ -28,7 +28,7 @@ Para isso, desenvolvemos um assistente que utiliza RAG, uma técnica que permite
 
 ## 3. Funcionamento da arquitetura (0:55–1:25)
 
-"Nosso sistema carrega documentos, divide o conteúdo em partes menores, gera embeddings com o Nomic e armazena esses vetores no ChromaDB.
+"Nosso sistema carrega documentos, divide o conteúdo em partes menores, gera embeddings com o modelo Nemotron 3 Embed (OpenRouter) e armazena esses vetores no ChromaDB.
 
 Quando o usuário faz uma pergunta, o sistema recupera os trechos mais relevantes e os envia ao modelo de linguagem, que constrói uma resposta baseada nessas informações.
 

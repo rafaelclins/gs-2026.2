@@ -25,7 +25,7 @@ Sistema RAG (Retrieval-Augmented Generation) que consulta base documental munici
 ```text
 ┌──────────────────┐      ┌───────────────────┐      ┌──────────────────┐
 │ Base Documental  │─────▶│ Chunking          │─────▶│ Embeddings       │
-│ (2 arquivos)     │      │ (2 estratégias)   │      │ (Ollama)         │
+│ (2 arquivos)     │      │ (2 estratégias)   │      │ (OpenRouter)     │
 └──────────────────┘      └───────────────────┘      └──────────────────┘
                                                               │
                                                               ▼
@@ -53,13 +53,13 @@ Sistema RAG (Retrieval-Augmented Generation) que consulta base documental munici
 
 | Componente | Tecnologia | Função |
 |------------|------------|--------|
-| LLM | Ollama Cloud (gemma4:31b) | Geração de respostas |
-| Embeddings | Ollama (nomic-embed-text) | Vetorização de documentos |
+| LLM | OpenRouter (nvidia/nemotron-3-ultra-550b-a55b:free) | Geração de respostas |
+| Embeddings | OpenRouter (nvidia/nemotron-3-embed-1b:free) | Vetorização de documentos |
 | Vetor DB | ChromaDB | Busca semântica |
 | Orquestração | LangChain (LCEL) | Pipeline RAG |
 | Agente | LangChain Tools | Decisão de usar ferramentas |
 | Interface | Gradio | Chat web |
-| Avaliação | RAGAS (llama3.2 + nomic-embed-text) | Métricas de qualidade |
+| Avaliação | RAGAS (nvidia/nemotron-3-ultra-550b-a55b:free + nvidia/nemotron-3-embed-1b:free, via OpenRouter) | Métricas de qualidade |
 
 ---
 
@@ -119,7 +119,7 @@ Sistema RAG (Retrieval-Augmented Generation) que consulta base documental munici
 ## 7. Como Executar
 
 1. Abrir notebook no Google Colab
-2. Configurar `OLLAMA_API_KEY` nos Secrets
+2. Configurar `OPENROUTER_API_KEY` nos Secrets (com **Notebook access** ligado)
 3. Runtime → Run all
 4. Acessar interface Gradio via link público
 

@@ -21,9 +21,10 @@ FERRAMENTAS UTILIZADAS
         RAGAS), criação dos arquivos de documentação.
    Datas: 05/11/2026 a 19/11/2026
 
-3. OLLAMA CLOUD — Modelo de Linguagem
-   Uso: LLM (gemma4:31b) para geração de respostas no RAG e
-        llama3.2 (Ollama local) como juiz nas métricas RAGAS.
+3. OPENROUTER — Modelo de Linguagem
+   Uso: LLM (nvidia/nemotron-3-ultra-550b-a55b:free) para geração de
+        respostas no RAG e como juiz nas métricas RAGAS, com
+        embeddings nvidia/nemotron-3-embed-1b:free.
    Datas: Durante desenvolvimento e avaliação
 
 ============================================================
@@ -42,7 +43,7 @@ DECLARAÇÃO
 Declaramos que o uso de IA foi limitado a:
 - Planejamento arquitetural (Kimi)
 - Geração de código (OpenCode)
-- Execução do modelo (Ollama)
+- Execução do modelo (OpenRouter)
 
 Todas as decisões técnicas foram tomadas e compreendidas 
 pelos integrantes do grupo. O código foi revisado, testado 

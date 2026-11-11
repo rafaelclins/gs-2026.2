@@ -38,14 +38,13 @@ LINKS
 ============================================================
 
 Repositório de código:
-[INSERIR LINK DO GITHUB]
+https://github.com/rafaelclins/gs-2026.2
 
 Vídeo de demonstração (YouTube não listado):
 [INSERIR LINK DO YOUTUBE]
 
 Notebook no Google Colab:
-[INSERIR LINK DO COLAB]
-
+https://colab.research.google.com/drive/1SPvGlcoWA2nmRPUNGHfNtHC-k1MfcXy2#scrollTo=rD1FLhnb9XzS
 ============================================================
 DECLARAÇÃO
 ============================================================
