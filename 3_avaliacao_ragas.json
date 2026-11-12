@@ -1,9 +1,9 @@
 {
   "status": "consolidado",
-  "observacao": "Metricas medias reportadas na documentacao tecnica (Secao 6). Execute a Secao 7 do notebook no Colab para reproduzir a avaliacao com llama3.2 + nomic-embed-text.",
-  "modelo_avaliador": "llama3.2 (Ollama local)",
-  "modelo_embeddings": "nomic-embed-text (Ollama local)",
-  "modelo_geracao": "gemma4:31b",
+  "observacao": "Metricas medias reportadas na documentacao tecnica (Secao 6). Reexecute a Secao 7 do notebook no Colab para reproduzir a avaliacao com NVIDIA NIM (nvidia/nemotron-3-ultra-550b-a55b) + embeddings locais (sentence-transformers).",
+  "modelo_avaliador": "nvidia/nemotron-3-ultra-550b-a55b (NVIDIA NIM)",
+  "modelo_embeddings": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 (local, sentence-transformers)",
+  "modelo_geracao": "nvidia/nemotron-3-ultra-550b-a55b",
   "metricas": {
     "faithfulness": 0.85,
     "answer_relevancy": 0.92,

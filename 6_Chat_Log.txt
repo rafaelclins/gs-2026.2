@@ -19,13 +19,13 @@ FERRAMENTAS UTILIZADAS
    Uso: Implementação de todas as seções do notebook 
         (chunking, ChromaDB, RAG, agente, Gradio, guardrails,
         RAGAS), criação dos arquivos de documentação.
-   Datas: 05/11/2026 a 19/11/2026
+   Datas: 05/11/2026 a 19/11/2026 (incluindo migração em 12–13/11/2026)
 
-3. OPENROUTER — Modelo de Linguagem
-   Uso: LLM (nvidia/nemotron-3-ultra-550b-a55b:free) para geração de
-        respostas no RAG e como juiz nas métricas RAGAS, com
-        embeddings nvidia/nemotron-3-embed-1b:free.
-   Datas: Durante desenvolvimento e avaliação
+3. NVIDIA NIM — Modelo de Linguagem: nvidia/nemotron-3-ultra-550b-a55b para geração no RAG e como juiz no RAGAS; embeddings locais com sentence-transformers (paraphrase-multilingual-MiniLM-L12-v2). Datas: migração em 12–13/11/2026, execução final a registrar.
+
+4. QWEN (Alibaba) — Planejamento da migração de stack, auditoria do notebook e criação dos prompts de correção para o OpenCode. Datas: 12–13/11/2026.
+
+5. OPENROUTER — Testes iniciais da migração com nvidia/nemotron-3-ultra-550b-a55b:free (substituído por limite diário de requisições). Datas: 12/11/2026.
 
 ============================================================
 NÃO UTILIZADAS
@@ -43,7 +43,8 @@ DECLARAÇÃO
 Declaramos que o uso de IA foi limitado a:
 - Planejamento arquitetural (Kimi)
 - Geração de código (OpenCode)
-- Execução do modelo (OpenRouter)
+- Execução do modelo (NVIDIA NIM)
+- Planejamento da migração (Qwen)
 
 Todas as decisões técnicas foram tomadas e compreendidas 
 pelos integrantes do grupo. O código foi revisado, testado 

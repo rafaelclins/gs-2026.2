@@ -24,19 +24,21 @@ O notebook `GS2026_2_1CCPI_GrupoX.ipynb` constrói um assistente capaz de respon
 O sistema:
 
 1. Carrega e divide os documentos em chunks com `RecursiveCharacterTextSplitter` (1000/100).
-2. Gera embeddings com `nvidia/nemotron-3-embed-1b:free` (OpenRouter) e indexa no ChromaDB.
-3. Recupera os chunks mais relevantes (`k=4`) e gera respostas com `nvidia/nemotron-3-ultra-550b-a55b:free` (OpenRouter), citando `doc_id`.
+2. Gera embeddings localmente com `HuggingFaceEmbeddings` usando `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` e indexa no ChromaDB.
+3. Recupera os chunks mais relevantes (`k=4`) e gera respostas com `nvidia/nemotron-3-ultra-550b-a55b` (NVIDIA NIM), citando `doc_id`.
 4. Oferece um agente com ferramentas (`calcular_proximo_horario` e `verificar_status_ponto`).
 5. Expõe uma interface Gradio com chat, fontes consultadas e nível de confiança.
 6. Aplica três guardrails: validação de faixa etária, proteção contra alucinação de horários e sanitização contra prompt injection.
-7. Avalia o pipeline com RAGAS (avaliador `nvidia/nemotron-3-ultra-550b-a55b:free` + embeddings `nvidia/nemotron-3-embed-1b:free`, via OpenRouter) e exporta `3_avaliacao_ragas.json`.
+7. Avalia o pipeline com RAGAS (avaliador `nvidia/nemotron-3-ultra-550b-a55b` via NVIDIA NIM + embeddings locais com `HuggingFaceEmbeddings`) e exporta `3_avaliacao_ragas.json`.
+
+**Stack final:** geração e avaliação via **NVIDIA NIM** (`nvidia/nemotron-3-ultra-550b-a55b`) e embeddings locais via **`HuggingFaceEmbeddings`** (`sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`). Não utiliza OpenRouter.
 
 ## Diagrama do pipeline
 
 ```mermaid
 flowchart LR
     A[Base documental<br/>2024 + 2025] --> B[Chunking<br/>Recursive 1000/100]
-    B --> C[Embeddings<br/>Nemotron 3 Embed]
+    B --> C[Embeddings<br/>HuggingFaceEmbeddings<br/>MiniLM-L12-v2 (local)]
     C --> D[(ChromaDB)]
 
     E[Pergunta do usuário] --> F{Guardrails}
@@ -45,7 +47,7 @@ flowchart LR
     F -->|ok| I[Retriever k=4]
 
     D --> I
-    I --> J[Prompt + LLM<br/>Nemotron 3 Ultra]
+    I --> J[Prompt + LLM<br/>Nemotron 3 Ultra (NVIDIA NIM)]
     I --> K[Fontes: doc_id, trecho, score]
     J --> L[Resposta + confiança]
     K --> L
@@ -77,12 +79,12 @@ flowchart LR
 2. Execute a célula de setup e instale as dependências:
    ```bash
    !pip install -q chromadb langchain langchain-core langchain-classic langchain-community \
-     langchain-text-splitters langchain-chroma langchain-openai \
+     langchain-text-splitters langchain-chroma langchain-openai langchain-huggingface sentence-transformers \
      gradio ragas datasets openai python-dotenv
    ```
 3. Envie a pasta `2_base_documental` para `/content` (ou monte o Google Drive).
-4. Em **Colab > Secrets**, configure `OPENROUTER_API_KEY` com a chave do OpenRouter (com **Notebook access** ligado).
-5. Execute as seções **0 a 7** em ordem. Os embeddings (seção 2), a geração (seção 3) e a avaliação RAGAS (seção 7) usam a API do OpenRouter.
+4. Em **Colab > Secrets**, configure `NVIDIA_API_KEY` com a chave da NVIDIA NIM (`nvapi-...` de build.nvidia.com) e **Notebook access** ligado.
+5. Execute as seções **0 a 7** em ordem. Os embeddings (seção 2) rodam localmente via `HuggingFaceEmbeddings`; a geração (seção 3) e a avaliação RAGAS (seção 7) usam a NVIDIA NIM.
 6. A interface Gradio sobe na seção 6.3:
    ```python
    demo.launch(share=True)
@@ -94,8 +96,8 @@ flowchart LR
 
 ### Requisitos
 
-- Conta e chave no OpenRouter (`OPENROUTER_API_KEY`).
-- Modelos gratuitos: `nvidia/nemotron-3-ultra-550b-a55b:free` (geração/avaliação) e `nvidia/nemotron-3-embed-1b:free` (embeddings).
+- Conta e chave na NVIDIA NIM (`NVIDIA_API_KEY`, `nvapi-...` de build.nvidia.com).
+- Modelo `nvidia/nemotron-3-ultra-550b-a55b` (geração/avaliação) na NVIDIA NIM; embeddings locais via `HuggingFaceEmbeddings` (`sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`).
 
 ## Link do vídeo
 

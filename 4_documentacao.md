@@ -6,7 +6,7 @@
 - Rafael Côrtes Lins — RM 570588
 - Tom Stringasci Albuquerque Coelho Morais — RM 568844
 
-**Turma:** 1CCPG | **Tema:** Mobilidade
+**Turma:** 1CCPI | **Tema:** Mobilidade
 
 ---
 
@@ -25,7 +25,7 @@ Sistema RAG (Retrieval-Augmented Generation) que consulta base documental munici
 ```text
 ┌──────────────────┐      ┌───────────────────┐      ┌──────────────────┐
 │ Base Documental  │─────▶│ Chunking          │─────▶│ Embeddings       │
-│ (2 arquivos)     │      │ (2 estratégias)   │      │ (OpenRouter)     │
+│ (2 arquivos)     │      │ (2 estratégias)   │      │ (local/ST)       │
 └──────────────────┘      └───────────────────┘      └──────────────────┘
                                                               │
                                                               ▼
@@ -53,13 +53,13 @@ Sistema RAG (Retrieval-Augmented Generation) que consulta base documental munici
 
 | Componente | Tecnologia | Função |
 |------------|------------|--------|
-| LLM | OpenRouter (nvidia/nemotron-3-ultra-550b-a55b:free) | Geração de respostas |
-| Embeddings | OpenRouter (nvidia/nemotron-3-embed-1b:free) | Vetorização de documentos |
+| LLM | NVIDIA NIM (nvidia/nemotron-3-ultra-550b-a55b) | Geração de respostas |
+| Embeddings | sentence-transformers local (paraphrase-multilingual-MiniLM-L12-v2) | Vetorização de documentos |
 | Vetor DB | ChromaDB | Busca semântica |
 | Orquestração | LangChain (LCEL) | Pipeline RAG |
 | Agente | LangChain Tools | Decisão de usar ferramentas |
 | Interface | Gradio | Chat web |
-| Avaliação | RAGAS (nvidia/nemotron-3-ultra-550b-a55b:free + nvidia/nemotron-3-embed-1b:free, via OpenRouter) | Métricas de qualidade |
+| Avaliação | RAGAS (Nemotron 3 Ultra via NVIDIA NIM + embeddings locais) | Métricas de qualidade |
 
 ---
 
@@ -97,7 +97,7 @@ Sistema RAG (Retrieval-Augmented Generation) que consulta base documental munici
 
 | Guardrail | Implementação | Exemplo |
 |-----------|---------------|---------|
-| Validação de data | Compara `data_publicacao` nos metadados | Sempre usa documento mais recente |
+| Validação de faixa etária | Verifica regra de gratuidade de idosos/gestantes (só dias úteis, Portaria 047/2025) | Alerta em perguntas de idosos/gestantes em fins de semana |
 | Proteção contra alucinação | Prompt: "Se não estiver no contexto, diga 'não sei'" | Nunca inventa horário |
 | Sanitização de input | Detecta "ignore instruções anteriores" | Bloqueia prompt injection |
 
@@ -107,10 +107,10 @@ Sistema RAG (Retrieval-Augmented Generation) que consulta base documental munici
 
 | Métrica | Valor | Análise |
 |---------|-------|---------|
-| faithfulness | 0.85 | Respostas ancoradas no contexto |
-| answer_relevancy | 0.92 | Perguntas respondidas diretamente |
-| context_recall | 0.78 | Recuperou portaria 2025 na maioria dos casos |
-| context_precision | 0.81 | Chunks relevantes priorizados |
+| faithfulness | [preencher após reexecução com a stack NVIDIA NIM] | Respostas ancoradas no contexto |
+| answer_relevancy | [preencher após reexecução com a stack NVIDIA NIM] | Perguntas respondidas diretamente |
+| context_recall | [preencher após reexecução com a stack NVIDIA NIM] | Recuperou portaria 2025 na maioria dos casos |
+| context_precision | [preencher após reexecução com a stack NVIDIA NIM] | Chunks relevantes priorizados |
 
 **Melhoria proposta:** Implementar reranking no retriever para aumentar context_precision em perguntas sobre faixa condicional.
 
@@ -119,15 +119,17 @@ Sistema RAG (Retrieval-Augmented Generation) que consulta base documental munici
 ## 7. Como Executar
 
 1. Abrir notebook no Google Colab
-2. Configurar `OPENROUTER_API_KEY` nos Secrets (com **Notebook access** ligado)
+2. Configurar `NVIDIA_API_KEY` nos Secrets (chave de build.nvidia.com)
 3. Runtime → Run all
 4. Acessar interface Gradio via link público
+
+> **Nota:** Na primeira execução, o modelo de embeddings (~470 MB) é baixado automaticamente para o ambiente do Colab.
 
 ---
 
 ## 8. Repositório
 
-[[Link do GitHub/GitLab do grupo](https://github.com/rafaelclins/gs-2026.2)]
+https://github.com/rafaelclins/gs-2026.2
 
 ---
 
