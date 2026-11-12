@@ -30,7 +30,7 @@ Vídeo de demonstração (YouTube não listado):
 [INSERIR LINK DO YOUTUBE]
 
 Notebook no Google Colab:
-https://colab.research.google.com/drive/1SPvGlcoWA2nmRPUNGHfNtHC-k1MfcXy2#scrollTo=rD1FLhnb9XzS
+https://colab.research.google.com/drive/17RwDWP1azLBAu4tgcynkrInc_YdJKwHS
 ============================================================
 DECLARAÇÃO
 ============================================================
