@@ -38,7 +38,7 @@ O sistema:
 ```mermaid
 flowchart LR
     A[Base documental<br/>2024 + 2025] --> B[Chunking<br/>Recursive 1000/100]
-    B --> C[Embeddings<br/>HuggingFaceEmbeddings<br/>MiniLM-L12-v2 (local)]
+    B --> C["Embeddings<br/>HuggingFaceEmbeddings<br/>MiniLM-L12-v2 local"]
     C --> D[(ChromaDB)]
 
     E[Pergunta do usuário] --> F{Guardrails}
@@ -47,7 +47,7 @@ flowchart LR
     F -->|ok| I[Retriever k=4]
 
     D --> I
-    I --> J[Prompt + LLM<br/>Nemotron 3 Ultra (NVIDIA NIM)]
+    I --> J["Prompt + LLM<br/>Nemotron 3 Ultra (NVIDIA NIM)"]
     I --> K[Fontes: doc_id, trecho, score]
     J --> L[Resposta + confiança]
     K --> L
