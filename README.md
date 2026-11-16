@@ -59,19 +59,27 @@ flowchart LR
 
 ## Prints das telas
 
-> Substitua os arquivos abaixo pelos prints reais após executar a interface Gradio (`demo.launch()`).
-
 ### Chat com resposta e confiança
 
-![Chat do assistente](docs/tela-chat.png)
+Pergunta sobre o itinerário, resposta do assistente e o painel de confiança (média 0.6708), marcando que os trechos recuperados aparecem com `doc_id`, trecho e score.
+
+![Chat com resposta e confiança](docs/tela-chat.png)
 
 ### Painel de fontes consultadas
 
-![Painel de fontes](docs/tela-fontes.png)
+Fontes ranqueadas pelo retriever (`k=4`) com tipo, data, score de similaridade e trecho recuperado.
+
+![Painel de fontes consultadas (1)](docs/tela-fontes-1.png)
+
+![Painel de fontes consultadas (2)](docs/tela-fontes-2.png)
 
 ### Avaliação RAGAS
 
-![Métricas RAGAS](docs/tela-ragas.png)
+Exemplos de perguntas e respostas com as fontes citadas, seguidos das métricas RAGAS (`faithfulness`, `answer_relevancy`, `context_recall`, `context_precision`) e do diagnóstico exportado para `3_avaliacao_ragas.json`.
+
+![Avaliação RAGAS (1)](docs/tela-ragas-1.png)
+
+![Avaliação RAGAS (2)](docs/tela-ragas-2.png)
 
 ## Instruções de execução
 
