@@ -1,5 +1,5 @@
 ============================================================
-GS2026.2 — CITIZENTECH: ASSISTENTE DE MOBILIDADE URBANA
+GS2026.2 - CITIZENTECH: ASSISTENTE DE MOBILIDADE URBANA
 ============================================================
 
 EQUIPE:
@@ -12,12 +12,11 @@ TEMA: Mobilidade
 DATA: 19/11/2026
 
 ============================================================
-TELA FINAL DO SISTEMA
+TELA DE INÍCIO DO SISTEMA
 ============================================================
 
-[Cópia da tela final do Gradio aqui]
-
-[PREENCHER COM INTERAÇÃO REAL APÓS REEXECUÇÃO — usar os doc_ids reais do sistema: DOC-2024-714 e PORTARIA-047-2025-SM]
+Arquivo da tela de início: 5_certificacao_tela_inicio.png
+(Interface Gradio do Assistente da Linha 714 em execução)
 
 ============================================================
 LINKS
@@ -27,16 +26,16 @@ Repositório de código:
 https://github.com/rafaelclins/gs-2026.2
 
 Vídeo de demonstração (YouTube não listado):
-[INSERIR LINK DO YOUTUBE]
+https://youtube.com/shorts/t6M9AzXyMTM
 
 Notebook no Google Colab:
-https://colab.research.google.com/drive/17RwDWP1azLBAu4tgcynkrInc_YdJKwHS
+https://colab.research.google.com/drive/1SPvGlcoWA2nmRPUNGHfNtHC-k1MfcXy2#scrollTo=rD1FLhnb9XzS
 ============================================================
 DECLARAÇÃO
 ============================================================
 
 Declaramos que este trabalho é de nossa autoria, desenvolvido
-para a disciplina [NOME OFICIAL DA DISCIPLINA — confirmar com o professor] (FIAP),
+para a disciplina [NOME OFICIAL DA DISCIPLINA - confirmar com o professor] (FIAP),
 Global Solution 2026.2.
 
 São Paulo, 19 de novembro de 2026.
