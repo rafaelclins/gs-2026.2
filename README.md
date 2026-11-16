@@ -109,6 +109,5 @@ Exemplos de perguntas e respostas com as fontes citadas, seguidos das métricas 
 
 ## Link do vídeo
 
-> Adicione aqui o link da demonstração.
 
 [Vídeo de demonstração](https://www.youtube.com/shorts/t6M9AzXyMTM)
