@@ -1,6 +1,6 @@
 # Assistente de Mobilidade — Linha 714 (Vai-e-Vem)
 
-Projeto de **Generative Systems (GS 2026.2)** que implementa um pipeline **RAG** sobre a base documental da Linha 714 de transporte público, com interface de chat em Gradio, agente com ferramentas, guardrails de segurança e avaliação com RAGAS.
+Projeto de **Prompt and Artificial Intelligence (GS 2026.2)** que implementa um pipeline **RAG** sobre a base documental da Linha 714 de transporte público, com interface de chat em Gradio, agente com ferramentas, guardrails de segurança e avaliação com RAGAS.
 
 **Tema:** Mobilidade  
 **Turma/Sala:** 1CCPI  
